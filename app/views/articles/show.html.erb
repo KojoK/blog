@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="show-page">
+  <%= @article.title %>
+</div>
+<div class="showpg-img">
+  <%= image_tag  @article.image, class: "showpg-img" %>
+</div>
+
+<p class="showpg-content"><%= @article.content %></p>
+<div class="showpg-link">
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>|
+  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
