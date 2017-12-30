@@ -1,15 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<div class="show-page">
-  <%= @article.title %>
-</div>
-<div class="showpg-img">
-  <%= image_tag  @article.image, class: "showpg-img" %>
-</div>
-
-<p class="showpg-content"><%= @article.content %></p>
-<div class="showpg-link">
-  <%= link_to 'Edit', edit_article_path(@article) %> |
-  <%= link_to 'Back', articles_path %>|
-  <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div id="showpage">
+    <div class="showpage-title">
+      <%= @article.title%>
+    </div>
+  <div class="showpg-img">
+    <%= image_tag  @article.image, class: "showpg-img" %>
+    <p class="img-text">
+      <%= time_ago_in_words(@article.created_at) %> ago |
+      <%=  %>Author: Kojo K
+    </p>
+    <hr>
+  </div>
+  <div class="showpg-content">
+    <p><%= simple_format(@article.content) %></p>
+  </div>
+  <div class="showpg-link">
+    <%= link_to 'Edit', edit_article_path(@article), class:"edit" %>
+    <%= link_to 'Back', articles_path, class:"back" %>
+    <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete" %>
+  </div>
 </div>

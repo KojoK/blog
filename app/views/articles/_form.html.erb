@@ -10,23 +10,24 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
+<div id="form">
+  <div class="title-box">
+    <b><%= form.label :title %></b>
     <%= form.text_field :title, id: :article_title %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
+  <div class="content-box">
+    <b><%= form.label :content %></b>
     <%= form.text_area :content, id: :article_content %>
   </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image, id: :article_image %>
+  <div class="img-box">
+    <b><%= form.label :image %></b>
+    <%= form.text_field :image, id: :article_image, placeholder: "Upload image" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn-submit" %>
   </div>
+</div>
 <% end %>

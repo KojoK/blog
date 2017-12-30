@@ -12,37 +12,113 @@
  *
  *= require_tree .
  *= require_self
+   @import"form"
  */
 
- * {
-   margin: 0;
-   padding: 0;
- }
+ // * {
+ //   margin: 0;
+ //   padding: 0;
+ // }
 
  body {
    font-family: sans-serif;
-   line-height: 1.2em;
+   width: 90%;
+   margin: 5px  auto;
+   background-color: #fcfaf9;
+   // background-color: #ecf0f1
  }
-
+ // IMAGES
+ // --------------------------
  .index-img {
-   width: 340px;
-   height: 250px;
+   width: 100%;
+   height: 350px;
+   position: relative;
  }
  .showpg-img {
    width: 100%;
-   padding-bottom: 20px;
  }
- .show-page {
+ .img-text {
+   font-weight: bold;
+   font-style: italic;
+   color: 	#8993a2;
+ }
+ .index-title h1 {
+   text-align: center;
+ }
+hr {
+  color: #bdc3c7;
+  font-weight: bolder;
+}
+// CONTENTS  &  TITLEs
+// --------------------------
+ .showpage-title {
+   padding-bottom: 25px;
    font-size: 2.7em;
    text-align: center;
    color: #666666;
-   padding-bottom: 40px;
    text-transform: uppercase;
  }
-.showpg-content {
-  padding-bottom: 20px;
-}
-.showpg-content {
-  line-height: 1.6em;
+.showpg-content p {
   font-size: 1.4em;
+  line-height: 170%;
+  margin-bottom: 1.1em;
 }
+.news-flash {
+  width: 33.3%;
+  h4 {
+    text-align: center;
+  }
+}
+
+// p:first-letter{
+//     display:block;
+//     float:left;
+//     margin:3px;
+//     color:#f00;
+//     font-size:300%;
+// }
+.showpg-link {
+  margin-top: 20px;
+  text-align: center;
+}
+.showpg-link .edit {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;border-radius: 5px;
+  font-weight: bold;
+}
+.showpg-link .back {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  height: 450px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.back a {
+  text-decoration: none;
+  list-style-type: none;
+
+}
+.showpg-link .delete {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+ /* index
+  --------------------------
+*/
+.news-flash {
+  float: left;
+  margin-right:10px;
+}
+.news-flash > index-img {
+    width:350px;
+    height:250px;
+}
+
+// FORM
+//  --------------------------
